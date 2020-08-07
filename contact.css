@@ -1,0 +1,119 @@
+:root{
+  --font-color:#555;
+  --font-hover-color:orange;
+}
+#message{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:25vh;
+  font-family:"Raleway", sans-serif;
+  background-color:white;
+}
+
+.container{
+  width:500px;
+  box-shadow: 0 15px 35px rgba(50,50,93,.1),0 5px 15px rgba(0,0,0,.07);
+  padding:2em;
+  background-color:#fff;
+  margin-left: 80px;
+}
+.form-group{
+  margin-bottom:1.5em;
+  transition:all .3s;
+}
+.form-label{
+  font-size:.75em;
+  color:var(--font-color);
+  display:block;
+  opacity:0;
+  transition: all .3s;
+  transform:translateX(-50px);
+}
+.form-control{
+  box-shadow:none;
+  border-radius:0;
+  border-color:#ccc;
+  border-style:none none solid none;
+  width:100%;
+  font-size:1.25em;
+  transition:all .6s;
+}
+.form-control::placeholder{
+  color:#aaa;
+}
+.form-control:focus{
+  box-shadow:none;
+  border-color:var(--font-hover-color);
+  outline:none;
+}
+.form-group:focus-within{
+  transform:scale(1.1,1.1);
+}
+
+.form-control:invalid:focus{
+  border-color:red;
+}
+.form-control:valid:focus{
+  border-color:green;
+}
+
+.btn{
+  background: 0 0 #fff;
+  border:1px solid #aaa;
+  border-radius:3px;
+  color:var(--font-color);
+  font-size:1em;
+  padding:10 50px;
+  text-transform:uppercase;
+}
+.btn:hover{
+  border-color:var(--font-hover-color);
+  color:var(--font-hover-color);
+}
+textarea{
+  resize:none;
+}
+.focused > .form-label{
+  opacity:1;
+  transform:translateX(0px);
+
+}
+
+#contactheader {
+  position: relative;
+  font-size: 30px;
+  z-index: 1;
+  overflow: hidden;
+  text-align: center;
+  color: cyan;
+  margin-left: 250px;
+  max-width: 500px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+#contactheader:before, #contactheader:after {
+  position: absolute;
+  top: 51%;
+  overflow: hidden;
+  width: 50%;
+  height: 1px;
+  content: '\a0';
+  background-color: white;
+}
+#contactheader:before {
+  margin-left: -50%;
+  text-align: right;
+}
+.color {
+  background-color: #ccc;
+}
+#contactsection {
+  margin-left: -250px;
+}
+#contactp {
+  color: white;
+  margin-left: 350px;
+  max-width: 400px;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
